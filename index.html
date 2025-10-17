@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/shoe.png" type="image/png">
+    <title>Fina Estampa</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Tahoma, sans-serif;
+            overflow-x: hidden;
+        }
+
+
+
+        header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+
+
+        }
+
+        .linha {
+            background-color: black;
+            padding: 4px;
+        }
+
+        .banner {
+
+            height: 600px;
+            background: radial-gradient(circle at center,
+                    rgba(0, 0, 0, 0) 40%,
+                    /* centro claro */
+                    rgba(0, 0, 0, 0.5) 75%,
+                    /* bordas começam a escurecer */
+                    rgba(0, 0, 0, 0.8) 100%
+                    /* bordas bem escuras */
+                );
+            background-image: url('https://www.chanel.com/puls-img/c_limit,w_2400/q_auto:good,dpr_auto,f_auto/1751994564583-homepagecorpoonedesktop39jpg_1620x2880.jpg');
+            background-repeat: no-repeat;
+            background-position: center 50%;
+            background-size: 100% auto;
+
+
+
+        }
+
+        li,
+        a {
+            font-size: 14px;
+
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        li,
+        a:hover {
+            color: rgb(176, 16, 66);
+        }
+
+        .topo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 40px 15px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .logo {
+            position: absolute;
+            margin-top: 10px;
+
+        }
+
+
+        .list-topo {
+            list-style: none;
+            right: 20%;
+            display: flex;
+            position: absolute;
+            gap: 20px;
+
+        }
+
+        .list-topo li {
+            display: inline-block;
+            padding: 0 2px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .list-topo li:hover {
+            transform: scale(1.2);
+        }
+
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 15px;
+            background-color: rgb(255, 255, 255);
+
+
+        }
+
+        .menu-list {
+            list-style: none;
+            margin-right: 40px;
+
+        }
+
+        .menu-list li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+
+        /*produtos*/
+        button {
+            border: none;
+            background-color: transparent;
+            text-decoration: underline 1.5px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+
+        }
+
+        button:hover {
+            text-decoration: none;
+        }
+
+        .products {
+            margin: 10px;
+            text-align: center;
+
+        }
+
+        .image-product>img {
+            height: 300px;
+
+        }
+
+        article {
+            position: relative;
+            background-color: rgb(249, 249, 249);
+            height: 400px;
+            width: 300px;
+            padding: 10px;
+            border-radius: 4px;
+            color: black;
+            text-transform: uppercase;
+
+        }
+
+        article .star {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        article .star img {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .products h2 {
+            text-transform: uppercase;
+        }
+
+        .product-itens {
+            background-color: rgb(255, 255, 255);
+            height: 400px;
+            width: 300px;
+            margin: 20px;
+            text-align: left;
+            padding: auto;
+
+
+        }
+
+        .productList {
+            display: flex;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+        }
+
+        footer {
+            background-color: rgb(242, 242, 243);
+            width: 100vw;
+            padding: 20px;
+        }
+
+
+        .arco-list,
+        .host-list {
+            list-style: none;
+            padding: 20px;
+
+
+        }
+
+        .arco-list li a {
+            text-decoration: underline 1.5px;
+            color: rgb(126, 126, 126);
+        }
+
+        .arco-list li a:hover {
+            text-decoration: none;
+        }
+
+        .host-list {
+            list-style: none;
+            padding: 20px;
+
+
+        }
+
+        .host-list li a {
+            text-decoration: underline 1.5px;
+            color: rgb(126, 126, 126);
+        }
+
+        .host-list li a:hover {
+            text-decoration: none;
+        }
+
+        .payment {
+            list-style: none;
+            display: flex;
+        }
+
+        .payment li {
+            margin: 10px;
+
+        }
+
+        .rodape {
+            top: 8px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: first baseline;
+            flex-wrap: wrap;
+            margin: 0px 60px;
+        }
+
+        footer p {
+            text-transform: lowercase;
+            text-align: center;
+        }
+
+        aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        aside h3 {
+            text-transform: uppercase;
+        }
+
+        .marcas {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+        }
+
+        .marcas img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho ou banner -->
+    <header>
+        <div class="linha"></div>
+        <div class="fixo">
+            <div class="topo">
+                <img class="logo"
+                    src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/finaEstampa.teste.png"
+                    height="35px">
+
+                <ul class="list-topo">
+                    <li><a href="#" class="user"><img
+                                src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/people.png"
+                                height="20px"></a></li>
+                    <li><a href="#" class="bag"><img
+                                src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/parcel.png"
+                                height="20px"></a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--menu principal -->
+        <div class="menu">
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="#">Alta costura</a></li>
+                    <li><a href="#">Moda</a></li>
+                    <li><a href="#">Alta joalheria</a></li>
+                    <li><a href="#">Joalheria</a></li>
+                    <li><a href="#">Óculos</a></li>
+                    <li><a href="#">Relógios</a></li>
+
+                </ul>
+            </nav>
+            <a href="#">About Fina Estampa</a>
+        </div>
+    </header>
+    <!--banner-->
+    <div class="banner">
+
+    </div>
+
+    <section>
+        <!--produtos -->
+
+        <div class="products">
+            <h2>Combinação perfeita</h2>
+            <ul class="productList">
+                <li class="product-itens">
+                    <article>
+                        <div class="image-product">
+                            <img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/bolsa.png"
+                                alt="">
+                        </div>
+                        <button class="star"><img
+                                src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/star.png"
+                                alt=""></button>
+
+                        <span>Bolsa baguette</span>
+                        <p>R$ 75</p>
+                        <button>Adicionar à sacola</button>
+                    </article>
+                </li>
+                <li class="product-itens">
+                    <article>
+                        <div class="image-product">
+                            <img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/sapato.png"
+                                alt="">
+                        </div>
+                        <button class="star"><img
+                                src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/star.png"
+                                alt="" height="15px"></button>
+
+                        <span>Sandália bico fino</span>
+                        <p>R$ 115</p>
+                        <button>Adicionar à sacola</button>
+                    </article>
+                </li>
+                <li class="product-itens">
+                    <article>
+                        <div class="image-product">
+                            <img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/brinco.png"
+                                alt="">
+                        </div>
+                        <button class="star"><img
+                                src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/star.png"
+                                alt="" height="15px"></button>
+
+                        <span>Brinco cereja</span>
+                        <p>R$ 18</p>
+                        <button>Adicionar à sacola</button>
+                    </article>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </section>
+    <!--patrocinadores -->
+    <aside>
+        <h3>Encontre aqui</h3>
+        <ul class="marcas">
+            <a
+                href="https://www.swarovski.com.br/?&msclkid=4f2b53b595731511ebf83b4476fe9662&utm_source=bing&utm_medium=cpc&utm_campaign=BR_PT_Search_Branded_Core_Exact&utm_term=swarovski&utm_content=Brand%3A%20Core&gclid=4f2b53b595731511ebf83b4476fe9662&gclsrc=3p.ds&gad_source=7&gad_campaignid=17274726192">
+                <li><img src="https://logowik.com/content/uploads/images/t_swarovski-2021-new2289.jpg" alt=""></li>
+            </a>
+            <a
+                href="https://www.dior.com/en_gb/beauty/fragrance/womens-fragrance/poison?msclkid=8bc938c2c55614e923c25033359838b5&utm_source=bing&utm_medium=cpc&utm_campaign=PCD_PC_GBR_FRA_WOM_FRAG_OGOING_EC_TXT_BIN_CRD_ENG_GBP_NOA_BRA&utm_term=dior%20vanilla%20perfume&utm_content=OTHER">
+                <li><img src="https://vesaura.com/cdn/shop/articles/Dior_Logo.png?v=1754924218" alt=""></li>
+            </a>
+            <a href="https://www.dolcegabbana.com/en-it/">
+                <li><img src="https://cdn.sanity.io/images/kts928pd/production/67d58c5f5afe0201593f5a7162fb384ecf1ae941-500x500.jpg"
+                        alt=""></li>
+            </a>
+        </ul>
+    </aside>
+    <!--rodape -->
+    <footer>
+        <div class="rodape">
+            <div>
+                <ul class="payment">
+                    <li><img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/visa.png"
+                            alt="" height="30px"></li>
+                    <li><img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/amex.png"
+                            alt="" height="30px"></li>
+                    <li><img src="https://raw.githubusercontent.com/lidjab/estudo-finaEstampa/refs/heads/main/money.png"
+                            alt="" height="30px"></li>
+                </ul>
+
+            </div>
+            <div class="arco">
+
+                <ul class="arco-list">
+                    <h4>Informações Úteis</h4>
+                    <li><a href="#">Política de reembolso</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de serviço</a></li>
+                    <li><a href="#">Política de frete</a></li>
+                    <li><a href="#">Informações de contato</a></li>
+                    <li><a href="#">Preferências de cookies</a></li>
+                </ul>
+            </div>
+            <div class="host">
+
+                <ul class="host-list">
+                    <h4>Sobre Nós</h4>
+                    <li><a href="#">Atendimento ao Cliente</a></li>
+                    <li><a href="#">Regulamento</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <p>2025, Fina Estampa - CNPJ:22.123.456/0001-78 <br>
+            Rua Ciranda Cirandinha, número 123, Fortaleza, CE, CEP 12345-678</p>
+    </footer>
+
+
+</body>
+
+</html>
